@@ -9,3 +9,22 @@ budget: number
 Metodas: 
 wasExpensive() - jeigu filmo "budget" yra daugiau nei 100 000 000 mln USD, tada grąžins true, kitu atveju false. 
 ------------------------------------------------------------------------------------------------------ */
+
+class Movie {
+  constructor(title, director, budget) {
+    this.title = title;
+    this.director = director;
+    this.budget = budget;
+  }
+  wasExpensive(budget) {
+    if (budget > 100000000) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
+
+const movie = new Movie("Mirrors", "John", 99999999999);
+console.log(movie);
+console.log("Budget is expensive " + movie.wasExpensive(99999999999));
